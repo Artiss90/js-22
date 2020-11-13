@@ -36,7 +36,7 @@ function onSearch(e) {
 
 function renderPokemonCard(pokemon) {
   const markup = pokemonCardTpl(pokemon);
-  refs.cardContainer.innerHTML = markup;
+  refs.cardContainer.insertAdjacentHTML("beforeend", markup);
 }
 
 function onFetchError(error) {
