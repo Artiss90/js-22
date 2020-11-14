@@ -7,9 +7,29 @@
  *  - https://lpj-weather-service.herokuapp.com/
  */
 import '../css/common.css';
+import NewApiService from './NewsAPI'
 
-fetch(
-  'https://lpj-weather-service.herokuapp.com/weather?lat=39.916668&lon=116.383331',
-)
-  .then(r => r.json())
-  .then(console.log);
+const refs = {
+  searchForm: document.querySelector('.js-search-form'),
+  articlesList: document.querySelector('.js-articles-container'),
+  loadMoreBtn: document.querySelector('[data-action="load-more"]'),
+};
+
+refs.searchForm.addEventListener('submit', onSearchFunc);
+// refs.loadMoreBtn.addEventListener('click', toLoadMore);
+
+const NewApi = new NewApiService();
+
+let searchQuery = '';
+
+function onSearchFunc(e) {
+  e.preventDefault();
+  
+  const searchQuery = e.currentTarget.elements.query.value;
+  
+  NewApi.fetchArticles(searchQuery)
+}
+     
+       
+      
+  
