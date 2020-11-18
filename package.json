@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "parcel src/*.html",
     "build": "parcel build src/*.html",
-    "deploy": "gh-pages -d build"
+    "predeploy": "npm run build -- --public-url=/js-22/",
+    "deploy": "gh-pages -d dist"
   },
   "repository": {
     "type": "git",
