@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "dev": "parcel src/*.html",
-    "build": "parcel build src/*.html"
+    "build": "parcel build src/*.html",
+    "deploy": "gh-pages -d build"
   },
   "repository": {
     "type": "git",
@@ -17,7 +18,7 @@
   "bugs": {
     "url": "https://github.com/luxplanjay/js-22/issues"
   },
-  "homepage": "https://github.com/luxplanjay/js-22#readme",
+  "homepage": "https://artiss90.github.io/js-22",
   "devDependencies": {
     "parcel-bundler": "^1.12.4",
     "parcel-plugin-handlebars-precompile": "^1.0.2",
